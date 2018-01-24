@@ -1,0 +1,462 @@
+/* reset padding and margins */
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	font-family: helvetica, arial, sans-serif;
+}
+
+/* container */
+
+.container {
+	position: relative;
+}
+
+/* items */
+
+.item {
+	height: 120px;
+	width: 120px;
+	border-radius: 50%;
+	background: blue;
+	color: yellow;
+	line-height:120px;
+
+	margin: 10px;
+
+	/* comment out 'float: left;' to have items stack in a single column */
+	float: left; 
+
+	/* uncomment this to get CSS transitions (conflicts with jQuery) */
+	/* transition: all 500ms ease; */
+}
+
+/* example buttons */
+
+#button-1:onclick {
+	transform: scale(1.5);
+}
+
+#button-1:active {
+	background: pink;
+	opacity: 1;
+}
+
+/* example buttons */
+
+#button-2{
+	text-align:center;
+}
+
+#button-2::after {
+	content: 'Hi';
+	line-height: 120px;
+	color: black;
+}
+
+#button-2:hover::after {
+	content: 'Bye';
+	color: red;
+}
+
+#button-4:active {
+	transform: scale(2,2);
+}
+
+#button-5:active {
+	transform: scaleX(3);
+	background:red;
+}
+
+#button-7:active {
+	transform: scale(0.5,0.5);
+}
+
+#button-8:active {
+	transform: scale(1.5);
+
+}
+#button-8:after {
+    content: "";
+    background: #90EE90;
+    display: block;
+    position: absolute;
+    padding-top: 10%;
+    padding-left: 10%;
+    opacity: 0;
+    transition: all 0.5s
+}
+#button-8:active:after {
+    padding: 0;
+   
+    opacity: 1;
+    transition: 0s
+}
+
+#button-9:hover {
+	transform: translate(-25px,-25px);
+}
+
+#button-10:hover {
+	transform: translate(25px,25px);
+}
+
+#button-11:active {
+	transform: scale(1.5);
+	text-align:center;
+	transform: rotate(20deg);
+}
+#button-11::after {
+	content: 'Hover';
+	line-height: 120px;
+	color: black;
+
+}
+#button-11:hover::after {
+	content: 'Click';
+	color: red;
+}
+
+
+#button-12:active {
+	transform: scale(1.5);
+	background: red;
+    -webkit-animation-name: color; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+}
+
+@keyframes color {
+    from {background: red;}
+    to {background: yellow;}
+}
+
+#button-13:hover {
+	Background:green;
+	 -webkit-animation-name: moving; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+}
+@keyframes moving {
+	0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+
+#button-14:active {
+	border: 5px solid red;
+}
+
+#button-15:active {
+	border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px black;
+}
+
+#button-16:active {
+	
+    padding: 10px;
+    box-shadow: -5px -10px black;
+}
+
+#button-17:active {
+	
+    padding: 10px;
+    box-shadow: -5px -10px black;
+    background:red;
+}
+
+#button-18:active {
+	border: 4px solid;
+    padding: 10px;
+    box-shadow: 275px 0px black;
+    background:red;
+}
+
+#button-19:active {
+	border: 4px solid;
+    padding: 10px;
+    box-shadow: 275px 0px black;
+    background:red;
+    	 -webkit-animation-name: moving; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+}
+@keyframes moving {
+	0%   {background-color:red; left:0px; top:0px; box-shadow: 200px 0px black;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px; box-shadow: 100px 0px white;}
+}
+#button-20:active {
+    box-shadow: 0px 0px black;
+    background:red;
+    	 -webkit-animation-name: moving; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+}
+@keyframes moving {
+	0%   {box-shadow: 0px 0px black;}
+    100% {box-shadow: 0px 200px white;}
+}
+#button-21:active {
+	background-image: url("img/egg.jpg");
+}
+#button-22:active{
+	height:2500px;
+	width:2500px;
+	margin: -500px;
+    background: lightblue;
+    border-radius:0px;
+}
+#button-23:hover {
+	border-radius:0px;
+}
+#button-24:hover {
+	border-radius:50px;
+}
+#button-25:hover {
+	background-image: url("img/egg.jpg");
+	background-color: #cccccc;
+	display:inline;
+}
+#button-26:hover{
+	border-bottom: 5px solid yellow;
+	border-top: 5px solid yellow;
+}
+#button-27:hover {
+	cursor: wait;
+}
+#button-28:hover {
+	 font-family: "Times New Roman", Georgia, Serif;
+}
+#button-29:hover {
+	background: linear-gradient(red, yellow);
+}
+#button-30:hover{
+	-webkit-transform: rotateY(150deg); /* Safari */
+    transform: rotateY(150deg); /* Standard syntax */
+    line-height: 120px;
+    font-family: helvetica, sans-serif;
+    font-size:14pt;
+    color:black;
+}
+#button-31:hover{
+	-webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+    transition: width 2s;
+    width: 300px;
+}
+#button-32:active {
+	position: relative;
+    -webkit-animation-name: around; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: around;
+    animation-duration: 4s;
+    /* Safari 4.0 - 8.0 */
+
+}
+@-webkit-keyframes around {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes around {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {left:800px; top:0px;}
+    50%  {background-color:blue; left:0px; top:0px;}
+    75%  {left:800px; top:0px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+#button-33:active {
+	position: relative;
+    -webkit-animation-name: around1; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: around1;
+    animation-duration: 4s;
+    /* Safari 4.0 - 8.0 */
+
+}
+@-webkit-keyframes around1 {
+    0%   {left:20px; top:0px;}
+    15%  {left:-20px; top:0px;}
+    25%  {left:20px; top:200px;}
+    45%  {left:-20px; top:200px;}
+    57%  {left:20px; top:0px;}
+    68%   {left:-20px; top:0px;}
+    79%  {left:20px; top:0px;}
+    89%  {left:-20px; top:200px;}
+    100% {left:20px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes around1 {
+    0%   {left:20px; }
+    10%  {left:-20px;}
+    20%  {left:20px;}
+    30%  {left:-20px;}
+    40%  {left:20px;}
+    50%   {left:-20px;}
+    60%  {left:20px;}
+    70%  {left:-20px;}
+    80% {left:20px;}
+    90%  {left:-20px;}
+    100% {left:20px;}
+}
+
+
+#button-35:active {
+	transform: scaleX(2);
+	background-color:red;
+}
+
+#button-36:hover{
+	background-color:black;
+	
+}
+#button-37:active{
+		position: relative;
+    -webkit-animation-name: blink; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: blink;
+    animation-duration: 4s;
+    /* Safari 4.0 - 8.0 */
+
+}
+@-webkit-keyframes blink {
+    0%   {opacity:1;}
+    15%  {opacity:0;}
+    25%  {opacity:1;}
+    45%  {opacity:0;}
+    57%  {opacity:1;}
+    68%   {opacity:0;}
+    79%  {opacity:1;}
+    89%  {opacity:0;}
+    100% {opacity:1;}
+}
+
+/* Standard syntax */
+@keyframes around1 {
+    0%   {opacity:1;}
+    15%  {opacity:0;}
+    25%  {opacity:1;}
+    45%  {opacity:0;}
+    57%  {opacity:1;}
+    68%   {opacity:0;}
+    79%  {opacity:1;}
+    89%  {opacity:0;}
+    100% {opacity:1;}
+}
+}
+#button-38:hover{
+	content: 'FIN.';
+	font-size: 558px;
+	color: red;
+}
+#button-39:active{
+		position: absolute;
+    -webkit-animation-name: fillin; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: fillin;
+    animation-duration: 4s;
+    /* Safari 4.0 - 8.0 */
+
+}
+@-webkit-keyframes fillin {
+    0%   {width:0px; height:0px;}
+    25%  {width:400px; height:0px;}
+    35%  {width:400px; height:0px;}
+    50%  {width:400px; height:0px;}
+    70%  {width:400px; height:200px;}
+    90%  {width:400px; height:400px;}
+    100% {width:400px; height:400px;}
+}
+
+/* Standard syntax */
+@keyframes fillin {
+    0%   {width:0px; height:0px;}
+    25%  {width:400px; height:0px;}
+    35%  {width:400px; height:0px;}
+    50%  {width:400px; height:0px;}
+    70%  {width:400px; height:200px;}
+    90%  {width:400px; height:400px;}
+    100% {width:400px; height:400px;}
+}
+
+#button-40:active{
+	border-width: 10px; 
+	border-style: dashed; 
+	border-color: red;
+}
+#button-41:hover{
+	content: '+';
+	text-align:center;
+	line-height: 120px;
+	color: black;
+}
+#button-41::after{
+	cursor:crosshair;
+}
+#button-42{
+	border-style: solid;
+	border-color: yellow;
+	border-width: 3px; 
+}
+#button-42:hover{
+	border-style: dotted;
+	border-color: yellow;
+}
+
+#button-43:hover{
+	border-style: double;
+	border-width:20px;
+	width:30px;
+	border-color:red;
+}
+#button-44:hover{
+	border-style: inset;
+	border-width:20px;
+	
+	
+}
+#button-45:hover{
+	border-style: outset;
+	border-width:5px;
+}
+#button-46:hover{
+	border-style: dotted dashed solid double;
+	border-width:10px;
+	border-color:10px;
+}
+#button-47:hover{
+	border-style: dotted solid dotted solid;
+	border-width:8px;
+	border-color:black;
+}
+#button-48:hover{
+	  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+#button-49:hover{
+	filter: drop-shadow(purple 10px 10px 20px);
+}
+#button-50:active{
+	
+	 -webkit-animation-name: rainbow; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+}
+@keyframes rainbow{
+	0%   {background-color:red; filter: drop-shadow(purple 10px 10px 20px)}
+    25%  {background-color:yellow; filter: drop-shadow(green 10px 10px 20px)}
+    75%  {background-color:green; filter: drop-shadow(blue 10px 10px 20px)}
+    100% {background-color:red; filter: drop-shadow(yellow 10px 10px 20px)}
+}
+}
+}
+}
