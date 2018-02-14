@@ -1,0 +1,103 @@
+.circle {
+    height: 1800px;
+    width: 1800px;
+    border-radius: 50%;
+    background: blue;
+    color: yellow;
+    margin-left:-90%;
+    margin-top:-50vh;
+    position:absolute;
+}
+.greencircle2 {
+    height: 1800px;
+    width: 1800px;
+    border-radius: 50%;
+    background: green;
+    margin-left:-70%;
+    margin-top:-50vh;
+    position:absolute;
+     -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+  animation-duration: 2s;
+  -webkit-animation-duration:2s;
+}
+
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);
+  }
+}
+
+
+.yellowcircle3 {
+    height: 1800px;
+    width: 1800px;
+    border-radius: 50%;
+    background: yellow;
+    margin-left:-50%;
+    margin-top:-50vh;
+    position:absolute;
+     -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+  animation-duration: 4s;
+  -webkit-animation-duration:4s;
+}
+
+.orangecircle4 {
+    height: 1800px;
+    width: 1800px;
+    border-radius: 50%;
+    background: orange;
+    margin-left:-30%;
+    margin-top:-50vh;
+    position:absolute;
+     -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+  animation-duration: 7s;
+  -webkit-animation-duration:7s;
+}
+
+.redcircle5 {
+    height: 1800px;
+    width: 1800px;
+    border-radius: 50%;
+    background: red;
+    margin-left:-10%;
+    margin-top:-50vh;
+    position:absolute;
+     -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+  animation-duration: 12s;
+  -webkit-animation-duration:12s;
+}
+
+
+body{
+    background:purple;
+     width:1000px;
+   margin:0 auto;
+}
+
+
