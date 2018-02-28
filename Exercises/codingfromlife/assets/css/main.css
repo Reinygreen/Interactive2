@@ -1,0 +1,145 @@
+body {
+	background: #cccccc;
+}
+
+.canvas {
+	width: 900px;
+	height: 556px;
+	margin: 100px auto;
+	background: white;
+	position: relative;
+}
+
+#triangle {
+	width: 0;
+	height: 0;
+	border-left: 75px solid transparent;
+	border-right: 75px solid transparent;
+	border-bottom: 150px solid blue;
+	position: absolute;
+	top: 315px;
+	left: 165px;
+	transform: rotate(-280deg);
+}
+
+
+
+	/* uncomment to add keyframe animation */
+	/* animation: spin 2s infinite; */
+
+
+#clip {
+	width: 150px;
+	height: 150px;
+	background: purple;
+	clip-path: polygon(50% 0%, 11% 35%, 98% 35%, 68% 57%, 79% 71%, 50% 70%, 21% 71%, 32% 57%, 2% 35%, 39% 35%);
+	top: 73px;
+	left: 400px;
+	position: absolute;
+
+	/* uncomment for css transitions */
+	/* transition: all 400ms ease; */
+}
+
+#sticks {
+	width: 300px;
+	height:10px;
+	background: green;
+	top:150px;
+	left:150px;
+	position:absolute;
+	transform: rotate(-10deg);
+}
+#sticks2 {
+	width: 300px;
+	height:10px;
+	background: green;
+	top:130px;
+	left:150px;
+	position:absolute;
+}
+
+#pen {
+	width: 350px;
+	height:50px;
+	background: blue;
+	top:400px;
+	left:400px;
+	position:absolute;
+}
+#pen2 {
+	width: 200px;
+	height:50px;
+	background: black;
+	top:430px;
+	left:530px;
+	position:absolute;
+	transform: rotate(-10deg);
+}
+
+#tape {
+	width: 150px;
+	height: 150px;
+	background: blue;
+	border-radius: 150px;
+	top: 330px;
+	left: 80px;
+	position: absolute;
+}
+
+#bottle {
+	width: 150px;
+	height:350px;
+	background: skyblue;
+	top:100px;
+	left:570px;
+	position:absolute;
+	z-index:0;
+}
+#bottlecap {
+	width: 90px;
+	height:50px;
+	background: gray;
+	top:50px;
+	left:600px;
+	position:absolute;
+	z-index:0;
+	animation: spin 2s infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+}
+#cup {
+	border-bottom: 300px solid grey;
+	border-left: 100px solid transparent;
+	border-right: 100px solid transparent;
+	height: 130px;
+	width: 100px;
+	top:200px;
+	margin-left:200px;
+}
+/* animations */
+
+/*
+#clip:hover {
+	transform: rotate(1200deg);
+}
+
+
+
+
+@keyframes move {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
+
+*/
